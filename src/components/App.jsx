@@ -6,6 +6,8 @@ import Players from "./Players";
 import TeamPage from "./TeamPage";
 import Player from "./Player";
 import Team from "./Team";
+import Article from "./Article";
+import Articles from "./Articles";
 
 export default function App() {
   return (
@@ -22,6 +24,9 @@ export default function App() {
             <Route path=":teamId" element={<Team />} />
           </Route>
           <Route path="/:teamId" element={<TeamPage />} />
+          <Route path="/:teamId/articles" element={<Articles />}>
+            <Route path=":articleId" element={<Article />} />
+          </Route>
         </Routes>
       </div>
     </Router>
